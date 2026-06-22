@@ -3,7 +3,7 @@
 ## Deskripsi Aplikasi
 Aplikasi *mobile hybrid* yang di rancang untuk memanajemen perputaran peminjaman komponen dan alat praktikum di laboraterium. Aplikasi ini memastikan ketersediaan perangkat keras selalu tersinkronisasi secara real-time antara antarmuka Mahasiswa (sebagai peminjam) dan Admin Lab (sebagai pengelola).
 
-Sistem ini mencegah terjadinya bentrok peminjaman pada perangkat yang jumlahnya terbatas, seperti Multimeter, Kabel, PLC, dengan memotong *state* stok secara presisi langsung dari *database* saat transaksi peminjaman terjadi.
+Sistem ini mencegah terjadinya bentrok peminjaman pada perangkat yang jumlahnya terbatas,  Mikrokontroler (ESP32), Sensor (MPU6050), Multimeter, hingga Modul PLC. dengan memotong *state* stok secara presisi langsung dari *database* saat transaksi peminjaman terjadi.
 
 ## Daftar API & Layanan yang Digunakan
 1. **API Eksternal (Axios)**: Digunakan untuk melakukan *seeding* atau menarik data awal katalog spesifikasi alat lab ke dalam aplikasi.
@@ -22,4 +22,4 @@ Dokumentasi dan pengerjaan proyek ini dikembangkan secara kolaboratif oleh tim (
 | Nama Anggota | Peran | Tugas & Tanggung Jawab Demo |
 | :--- | :--- | :--- |
 | **Faris** | Frontend & Axios Specialist | Merancang antarmuka (UI/UX) aplikasi dan mengintegrasikan Axios ke API eksternal. **Demo:** Menjelaskan UI dan alur penarikan data Axios untuk memunculkan daftar alat (Fitur 1). |
-| **Helena** | Backend, State & Firebase
+| **Helena** | Backend, State & Firebase Specialist | Mengelola arsitektur *state* lokal, setup integrasi Firebase Auth, dan Cloud Firestore. **Demo:** Menjelaskan manajemen data, validasi login, dan mendemonstrasikan sinkronisasi pemotongan stok *real-time* (Fitur 2 & 3). |
