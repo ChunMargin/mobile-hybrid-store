@@ -16,5 +16,5 @@ Aplikasi mobile E-Commerce hybrid yang memungkinkan transaksi pembelian secara o
 
 | Nama Anggota | Peran | Tugas & Tanggung Jawab Demo |
 | :--- | :--- | :--- |
-| Helena | Anggota 1: Frontend & Axios Specialist | Merancang UI/UX, integrasi Axios ke API eksternal. **Demo:** Menjelaskan UI dan penarikan data Axios (Fitur 1). |
-| Faris | Anggota 2: Backend, State & Firebase Specialist | Mengelola state lokal, setup integrasi Firebase Auth & Firestore. **Demo:** Menjelaskan manajemen data lokal dan arsitektur Firebase (Fitur 2 & 3). |
+| Faris | Anggota 1: Frontend & Axios Specialist | Merancang UI/UX, integrasi Axios ke API eksternal. **Demo:** Menjelaskan UI dan penarikan data Axios (Fitur 1). |
+| Helena | Anggota 2: Backend, State & Firebase Specialist | Mengelola state lokal, setup integrasi Firebase Auth & Firestore. **Demo:** Menjelaskan manajemen data lokal dan arsitektur Firebase (Fitur 2 & 3). |
