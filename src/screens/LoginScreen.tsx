@@ -17,7 +17,7 @@ import { auth } from '../services/firebase';
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState<'Pelanggan' | 'Kasir'>('Pelanggan');
+  const [role, setRole] = useState<'Mahasiswa' | 'Admin Lab'>('Mahasiswa');
   
   // 1. Inisialisasi router di sini
   const router = useRouter();
@@ -62,17 +62,17 @@ const LoginScreen = () => {
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer} showsVerticalScrollIndicator={false}>
         <View style={styles.headerContainer}>
-          <Text style={styles.title}>Hybrid Store</Text>
-          <Text style={styles.subtitle}>Sistem Sinkronisasi Inventaris Online & Offline</Text>
+          <Text style={styles.title}>Peminjaman Alat Lab</Text>
+          <Text style={styles.subtitle}>Sistem Sinkronisasi Inventaris Alat Praktikum Lab</Text>
         </View>
 
         <Text style={styles.label}>Masuk Sebagai:</Text>
         <View style={styles.roleContainer}>
-          <TouchableOpacity style={[styles.roleButton, role === 'Pelanggan' && styles.roleButtonActive]} onPress={() => setRole('Pelanggan')}>
-            <Text style={[styles.roleText, role === 'Pelanggan' && styles.roleTextActive]}>Pelanggan (Online)</Text>
+          <TouchableOpacity style={[styles.roleButton, role === 'Mahasiswa' && styles.roleButtonActive]} onPress={() => setRole('Mahasiswa')}>
+            <Text style={[styles.roleText, role === 'Mahasiswa' && styles.roleTextActive]}>Mahasiswa (Peminjam)</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.roleButton, role === 'Kasir' && styles.roleButtonActive]} onPress={() => setRole('Kasir')}>
-            <Text style={[styles.roleText, role === 'Kasir' && styles.roleTextActive]}>Kasir (Offline)</Text>
+          <TouchableOpacity style={[styles.roleButton, role === 'Admin Lab' && styles.roleButtonActive]} onPress={() => setRole('Admin Lab')}>
+            <Text style={[styles.roleText, role === 'Admin Lab' && styles.roleTextActive]}>Admin Lab (Pengelola)</Text>
           </TouchableOpacity>
         </View>
 

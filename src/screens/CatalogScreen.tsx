@@ -25,11 +25,11 @@ const CatalogScreen = () => {
     return () => unsubscribe();
   }, []);
 
-  // Fungsi yang dipanggil saat tombol beli ditekan
-  const handleBuy = async () => {
+  // Fungsi yang dipanggil saat tombol pinjam ditekan
+  const handleBorrow = async () => {
     try {
-      await checkoutProduct(realtimeStock, 1); // Membeli 1 item
-      Alert.alert('Sukses', 'Pembelian berhasil, stok telah dipotong!');
+      await checkoutProduct(realtimeStock, 1); // Meminjam 1 item
+      Alert.alert('Sukses', 'Peminjaman berhasil, stok telah dipotong!');
     } catch (error: any) {
       Alert.alert('Gagal', error.message);
     }
@@ -37,7 +37,7 @@ const CatalogScreen = () => {
 
   // Kita gunakan satu dummy product dulu untuk mendemonstrasikan sinkronisasi stoknya
   const DUMMY_PRODUCTS = [
-    { id: '1', title: 'Tas Ransel Gunung (Sync Test)', price: 250000 },
+    { id: '1', title: 'Mikrokontroler ESP32 (Sync Test)', price: 45000 },
   ];
 
   return (
@@ -60,11 +60,11 @@ const CatalogScreen = () => {
             </View>
             <TouchableOpacity 
               style={[styles.buyButton, realtimeStock === 0 && styles.buyButtonDisabled]} 
-              onPress={handleBuy}
+              onPress={handleBorrow}
               disabled={realtimeStock === 0}
             >
               <Text style={styles.buyButtonText}>
-                {realtimeStock === 0 ? 'Habis' : 'Beli'}
+                {realtimeStock === 0 ? 'Habis' : 'Pinjam'}
               </Text>
             </TouchableOpacity>
           </View>
